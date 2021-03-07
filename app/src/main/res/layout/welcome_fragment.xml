@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.welcome.WelcomeFragment">
+
+        <TextView
+            android:id="@+id/shoem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/monofett"
+            android:text="@string/title"
+            android:textColor="@color/colorAccent"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toTopOf="@+id/subtitle_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/subtitle"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/inventory_list_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoem_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/inventory_list_button"
+            style="@style/SlimButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/inventory_button"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle_text"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="2dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/shoeCompany"
+                    android:layout_width="63dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@{shoe.company}"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/shoeName"
+                    android:layout_width="71dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@{shoe.name}"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/shoeSize"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@{String.valueOf(shoe.size)}"
+                    android:textAlignment="viewEnd"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/shoeRowImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/showImgDesc"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:srcCompat="@drawable/ic_sneakers" />
+    </LinearLayout>
+</layout>

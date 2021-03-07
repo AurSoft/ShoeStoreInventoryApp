@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.shoes.details.NewShoeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/shoem_title_new_shoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/monofett"
+            android:text="@string/title"
+            android:textColor="@color/colorAccent"
+            android:textSize="72sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+         <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_image_button"
+            style="@style/SlimButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/add_image_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoem_title_new_shoe"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="8dp"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/name_text"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editTextShoeName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextShoeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/shoe_name_hint"
+            android:gravity="center_horizontal"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.81"
+            app:layout_constraintStart_toEndOf="@+id/name_details"
+            app:layout_constraintTop_toBottomOf="@+id/add_image_button" />
+
+        <TextView
+            android:id="@+id/company_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/company_text"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editTextCompany"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/shoe_company_hint"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/editTextShoeName"
+            app:layout_constraintStart_toStartOf="@+id/editTextShoeName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextShoeName" />
+
+        <TextView
+            android:id="@+id/size_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/size_text"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editTextSize"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/editTextCompany"
+            app:layout_constraintStart_toStartOf="@+id/editTextCompany"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCompany" />
+
+        <TextView
+            android:id="@+id/desc_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="@string/shoe_description_hint"
+            android:text="@string/desc_text"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSize" />
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="64dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc_details" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSaveShoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorAccent"
+            android:clickable="true"
+            android:contentDescription="@string/save_button_text"
+            android:focusable="true"
+            android:src="@android:drawable/ic_menu_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorAccent"
+            android:clickable="true"
+            android:contentDescription="@string/close_button_text"
+            android:focusable="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/fabSaveShoe"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

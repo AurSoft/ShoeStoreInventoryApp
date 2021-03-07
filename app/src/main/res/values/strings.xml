@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">Shoem!</string>
+    <string name="login_text">Login</string>
+    <string name="register_text">Register</string>
+    <string name="register_tip_text">First time? Click here to register!</string>
+    <string name="title">Shoem!</string>
+    <string name="subtitle">Everything that\'s not on your feet is now in your hands!</string>
+    <string name="inventory_button">Go to inventory!</string>
+    <string name="showImgDesc">Picture of the shoe</string>
+    <string name="company_text">Company</string>
+    <string name="name_text">Name</string>
+    <string name="size_text">Size</string>
+    <string name="desc_text">Description</string>
+    <string name="shoe_images_alt">This is a picture of the shoe</string>
+    <string name="next_button_text">Next image</string>
+    <string name="add_image_text">Add image</string>
+    <string name="add_another_image_text">Add another image</string>
+    <string name="instructions_text">Welcome to Shoem!\n\nThe app that allows you to store all of your shoes
+        (<i>at least until you close your app…</i>).\n\nBy pressing on the <b>Go to inventory!</b> button on the main screen,
+        you can easily access the list of the shoes you added.\n\nFrom there, you can add a new shoe, by pressing on
+        the <b>+</b> button, or view the details of one of the shoes you added.\n\nYou can also add a series of images
+        to every new shoe, that you can then see in the details of that shoe.
+    </string>
+    <string name="about_text">Shoem! is an app developed for the android kotlin developer nanodegree.\n\nThe main purpose of
+        this app is to practice the things learnt in the first part of the course, such as:\n- ViewModels\n- Navigation\n-
+        DataBinding\n- Layouts\n- … and more!\n\n\n In this part of the course, we still haven\'t approached persistence, and
+        this is why closing the application completely will result in the loss of the entire inventory.
+    </string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="save_button_text">Save button</string>
+    <string name="close_button_text">Close button</string>
+    <string name="shoe_name_hint">Shoes\' name</string>
+    <string name="shoe_company_hint">Shoes\' company</string>
+    <string name="shoe_description_hint">Add some details...</string>
+    <string name="fill_all_text">Fields Company, Name and Size are mandatory</string>
+    <string name="fill_login">Username and Password are both required</string>
 </resources>
