@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.shoes.details.NewShoeFragment">
 
+    <!--
+        In this case, the obvious choice was to use a ConstraintLayout.
+        It's easier to connect and arrange these many items with the designer
+        and, at the end, we obtain a flattened hierarchy for improved performances.
+        It's a win win!
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"

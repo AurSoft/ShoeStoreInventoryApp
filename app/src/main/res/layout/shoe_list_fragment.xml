@@ -4,6 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.shoes.list.ShoeListFragment">
 
+    <!--
+        Here I used FrameLayout because I just needed to put a ScrollView
+        and a FloatingActionButton on top of it. ScrollView holds the LinearLayout
+        whose role is to hold all the shoes contained in the list that users is
+        going to populate. For this job, a vertical LineaLayout is just the best
+        suited.
+    -->
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >

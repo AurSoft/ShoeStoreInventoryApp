@@ -9,64 +9,76 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
-    <LinearLayout
+    <!--
+        At first, I started to design the layout using linear layouts,
+        but that resulted in three nested linear layouts to just align
+        4 different views! ConstraintLayout solved the problem simplifying
+        the design and flattening the hierarchy, thus improving performances.
+    -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="265dp"
+        <TextView
+            android:id="@+id/shoeCompany"
+            android:layout_width="63dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:layout_margin="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{shoe.company}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shoeName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+        <TextView
+            android:id="@+id/shoeName"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{shoe.name}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shoeSize"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shoeCompany"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/shoeCompany"
-                    android:layout_width="63dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text="@{shoe.company}"
-                    android:textSize="14sp"
-                    android:ellipsize="end"
-                    android:maxLines="1"/>
-
-                <TextView
-                    android:id="@+id/shoeName"
-                    android:layout_width="71dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text="@{shoe.name}"
-                    android:textSize="14sp"
-                    android:ellipsize="end"
-                    android:maxLines="1"/>
-
-                <TextView
-                    android:id="@+id/shoeSize"
-                    android:layout_width="44dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text="@{String.valueOf(shoe.size)}"
-                    android:textAlignment="viewEnd"
-                    android:textSize="14sp"
-                    android:ellipsize="end"
-                    android:maxLines="1"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/shoeSize"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{String.valueOf(shoe.size)}"
+            android:textAlignment="viewEnd"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shoeRowImage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shoeName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.47" />
 
         <ImageView
             android:id="@+id/shoeRowImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="95dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="8dp"
             android:contentDescription="@string/showImgDesc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_launcher_foreground"
             tools:srcCompat="@drawable/ic_sneakers" />
-    </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

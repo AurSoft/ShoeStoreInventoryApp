@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
+
+    <!--
+        Here I could have used a LinearLayout too, just working with
+        gravity and margins to obtain the same result, but ConstraintLayout
+        was much easier to use to put the views where I had in mind by simply
+        using constraints and bias.
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/welcomeLayout"
         android:layout_width="match_parent"

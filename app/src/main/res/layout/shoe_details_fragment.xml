@@ -9,6 +9,12 @@
             type="com.udacity.shoestore.screens.shoes.SharedShoeViewModel" />
     </data>
 
+    <!--
+        As in new_shoe_fragment.xml, the obvious choice was to use a ConstraintLayout,
+        for its ease of use to connect and arrange many items and the flattened hierarchy
+        obtained by using it.
+    -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
